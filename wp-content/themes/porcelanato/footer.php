@@ -6,25 +6,25 @@
 
       <div class="col-xs-3 col-sm-12 col-md-2 col-lg-2 hidden-xs">
         <ul class="footer-menu">
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Sobre nós</a>
-          </li>
-          <li>
-            <a href="#">Nossos projetos</a>
-          </li> 
-          <li>
-            <a href="#">Orçamento</a>
-          </li>
+         <li class="active">
+              <a href="<?php echo home_url(); ?>">Home</a>
+            </li>
+            <li>
+              <a href="<?php echo home_url('#about-us'); ?>">Sobre nós</a>
+            </li>
+            <li>
+              <a href="<?php echo home_url('#projeto'); ?>">Nossos projetos</a>
+            </li>
+            <li>
+              <a href="<?php echo esc_url( get_permalink(32) ); ?>">Orçamento</a>
+            </li>
         </ul>
 
       </div>
 
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
         <h3 class="description-white">Profissionalismo e qualidade em porcelanato liquido</h3>
-        <h3 class="description-orange">Profissionalismo e qualidade em porcelanato liquido</h3>
+        <h3 class="description-orange">Solicite seu orçamento hoje mesmo</h3>
       </div>
 
       <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
@@ -35,7 +35,7 @@
             </a>
             <div class="media-body">
               <h4 class="media-heading">WhatsApp</h4>
-              <p>(11) 98196-1827</p>
+              <p>(11) 97047-1867</p>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
             </a>
             <div class="media-body">
               <h4 class="media-heading">Telefone</h4>
-              <p>(11) 98196-1827</p>
+              <p>(11) 97047-1867</p>
             </div>
           </div>
         </div>

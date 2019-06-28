@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Title Page</title>
+  <title>J&J Porcelanatos </title>
 <?php wp_head(); ?>
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
     <div id="header-top">
 
       <div class="container">
-        Futuro em construção
+        Futuro em construção <?= is_home(); ?>
       </div>
 
     </div>
@@ -52,7 +52,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="<?= home_url();?>">
             <img src="<?php echo bloginfo('template_url');?>/image/Logo.png" class="img-responsive" alt="Image">
           </a>
         </div>
@@ -66,7 +66,7 @@
               </a>
               <div class="media-body">
                 <h4 class="media-heading">CONTATO</h4>
-                <p>(11) 98196-1827</p>
+                <p>(11) 97047-1867</p>
               </div>
             </div>
 
@@ -92,22 +92,22 @@
           </div>
         </div>
       </div>
-      <hr style="border-color: #6f6f6e">
+      <hr style="border-color: #6f6f6e" class="hidden-xs">
       <div class="container">
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
             <li class="active">
-              <a href="#">Home</a>
+              <a href="<?php echo home_url(); ?>">Home</a>
             </li>
             <li>
-              <a href="#">Sobre nós</a>
+              <a href="<?php echo home_url('#about-us'); ?>">Sobre nós</a>
             </li>
             <li>
-              <a href="#">Nossos projetos</a>
+              <a href="<?php echo home_url('#projeto'); ?>">Nossos projetos</a>
             </li>
             <li>
-              <a href="#">Orçamento</a>
+              <a href="<?php echo esc_url( get_permalink(32) ); ?>">Orçamento</a>
             </li>
           </ul>
         </div>
@@ -120,7 +120,7 @@
       <h1>Profissionalismo e qualidade em porcelanato liquido</h1>
       <h2>Entre em contato e solicite um orçamento</h2>
 
-      <button type="button" class="btn btn-warning btn-lg">Faça um orçamento</button>
+      <a href="<?php echo esc_url( get_permalink(32) ); ?>" class="btn btn-warning btn-lg">Faça um orçamento</a>
 
     </div>
 <?php endif; ?>

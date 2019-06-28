@@ -1,7 +1,4 @@
 @media(max-width:767px) {
-  header {
-    height: 650px;
-  }
   header h1 {
     font-size: 35px;
   }
@@ -23,6 +20,14 @@
   }
   .text-banner h2 {
     padding: 0 0 20px;
+  }
+  .sc-white,
+  .sc-black {
+    padding: 30px 0;
+  }
+  .navbar-collapse {
+    background: #000;
+    padding: 0 20px !important;
   }
 }
 

@@ -2,7 +2,7 @@
 
 ?>
 
-  <section class="sc-black">
+  <section class="sc-black" id="about-us">
 
     <div class="container">
       <h2 class="title">Sobre nós</h2>
@@ -112,7 +112,7 @@
 
     </div>
   </section>
-  <section class="sc-black">
+  <section class="sc-black" id="projeto">
 
     <div class="container">
 
@@ -132,7 +132,12 @@ if ( $lastproject ) {
         setup_postdata( $post ); ?>
   <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div class="thumbnail">
-              <img src="<?php echo bloginfo('template_url');?>/image/banner1.jpg" alt="">
+             <?php if (has_post_thumbnail( get_the_ID()) ): ?>
+                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID() ), 'single-post-thumbnail' ); ?>
+                <img class="img-responsive" src="<?php echo $image[0]; ?>" alt="Image">
+              <?php else: ?>
+                <img src="<?php echo bloginfo('template_url');?>/image/banner1.jpg" alt="">
+              <?php endif;?>
               <div class="caption"> 
                 <p style="color: #000000;">
                  <?php echo apply_filters("custom_short_excerpt", get_the_excerpt()); ?>

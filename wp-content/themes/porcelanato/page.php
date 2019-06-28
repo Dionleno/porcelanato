@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-cxzczxczx
 <?php
           if(have_posts()):the_post();
 
